@@ -1,14 +1,15 @@
-# SWBio Data Science and Machine Learning Assessment:
+# SWBio Data Science and Machine Learning Assessment
 ## Using PyMOL for the alignment and RMSD calculation of protein-complex structures from docking experiments
 
-This code has been written in Python, utilising features from the python-based protein visualisation programe PyMOL, to process and compare hundreds of enzyme-complex model structures obtained from different protein docking experiments. Two different docking programmes (HADDOCK and BUDE) have been used to obtain structures for the complex of actACP (acyl-carrier protein) and actKR (ketoreductase) polyketide synthase enzymes which are involved in the synthesis of the polyketide antibiotic actinorhodin (act).
+### Description
+This code has been written in Python, utilising features from the python-based protein visualisation programe PyMOL, to process and compare hundreds of enzyme-complex model structures obtained from different protein docking experiments. 
 
-The code was originally written in Jupyter Notebook (file is available in this repository and shows development of code) and was simplified and converted to a .py script to be run from the JupyterLab terminal.  The code is primarily written to compare the hundreds of structures resulting from several HADDOCK docking experiments with the favoured structure from previous work using BUDE, called 'M14'. Comparisons can be made after aligning the actKR protein of each HADDOCK structure with the actKR of M14. The RMSD (root-mean-square deviation - a measure of distance between backbone atoms of superimposed proteins) is then calculated to compare the similarity of the docked orientation of the actACP in HADDOCK structures with its orientation in M14. The closer the RMSD value is to 0, the more similar the orientation of actACP is between the two structures and thus the more evidence that the identified HADDOCK structure shoule be taken forward for further analysis.
+Two different docking programmes (HADDOCK and BUDE) have been used to obtain structures for the complex of actACP (acyl-carrier protein) and actKR (ketoreductase) polyketide synthase enzymes which are involved in the synthesis of the polyketide antibiotic actinorhodin (act). The code is primarily written to compare the hundreds of structures resulting from several HADDOCK docking experiments with the favoured structure from previous work using BUDE, called 'M14'. Comparisons can be made after aligning the actKR protein of each HADDOCK structure with the actKR of M14. The RMSD (root-mean-square deviation - a measure of distance between backbone atoms of superimposed proteins) is then calculated to compare the similarity of the docked orientation of the actACP in HADDOCK structures with its orientation in M14. The closer the RMSD value is to 0, the more similar the orientation of actACP is between the two structures and thus the more evidence that the identified HADDOCK structure shoule be taken forward for further analysis.
 
 
-### Code components:
+### Code components
 
-Step 1: Importation of Pymol python package
+Step 1: The import of the Pymol python package
 
 Step 2: Loading of pdb files for all protein structures from the 'Sample Data' directory
 
@@ -33,8 +34,3 @@ The analysis is completed once a list of RMSD values corresponding to each HADDO
 
 ### Outcome
 The resulting ordered list of HADDOCK protein structures and their corresponding RMSD values allows for the rapid identification of favourable structures to take forward for further MD simulations and hence comparable analyses between different methods of favourable conformation identification. Already, the first, second, and third highest ranked HADDOCK protein structures based on these RMSD values have been used in MD simulations.
-
-
-
-
- 
