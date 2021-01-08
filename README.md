@@ -29,8 +29,41 @@ Step 4: Calculation of the RMSD of the HADDOCK actACP onto the M14 actACP
 
 4. Run the .py script (I typed ```python pymol_align_rmsd_script.py``` into the JupyterLab terminal) or alternatively run each step of the code individually in the Jupyter Notebook file. When prompted add the absolute (NOT relative!) file path which leads to the directory in which the .pdb files are saved to - if you downloaded the entire 'Sample data' directory from this repository it should finish with: ```/Sample Data/```
 
+
+### Output
+
+The output in the terminal after inputting the pathname when prompted will be as below:
+
+```PyMOL not running, entering library mode (experimental)
+(loading .pdb files complete)
+(alignment to M14 actKR complete)
+RMSD of M14 actACP onto:
+7a_1_cluster11_3 actACP = 4.773075688376693
+7a_1_cluster11_1 actACP = 5.009584779342392
+7a_1_cluster11_4 actACP = 5.015493295268009
+6a_1_cluster3_1 actACP = 5.018795516588423
+8b_2_cluster1_1 actACP = 6.324886342268573
+7a_1_cluster11_2 actACP = 6.499968052288807
+7a_6_cluster10_4 actACP = 6.62209567964455
+8b_2_cluster1_3 actACP = 6.6468543873230335
+7a_6_cluster10_2 actACP = 6.796989109232696
+7a_2_cluster3_2 actACP = 6.945380366790342
+7a_6_cluster10_1 actACP = 6.972798061183112
+8b_9_cluster10_1 actACP = 7.2115756841947
+8b_2_cluster1_2 actACP = 7.556836009686603
+8b_7_cluster8_2 actACP = 7.628766120584586 
+(etc.)
+Analysis complete
+```
+
+Note: 
+
+- The line ```PyMOL not running, entering library mode (experimental)``` is as a result of the PyMOL GUI not being used (it is not required for this PyMOL analysis).
+
+- The line ```(loading .pdb files complete)``` occurs once all .pdb files are loaded. 
+
+- The line ```(alignment to M14 actKR complete)``` occurs once all HADDOCK structure actKRs have been aligned to the M14 actKR.
+
+
 The analysis is completed once a list of RMSD values corresponding to each HADDOCK structure has been produced and the terminal prints out the message: ```Analysis complete```
-
-
-### Outcome
 The resulting ordered list of HADDOCK protein structures and their corresponding RMSD values allows for the rapid identification of favourable structures to take forward for further MD simulations and hence comparable analyses between different methods of favourable conformation identification. Already, the first, second, and third highest ranked HADDOCK protein structures based on these RMSD values have been used in MD simulations.
