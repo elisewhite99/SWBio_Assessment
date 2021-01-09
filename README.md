@@ -22,7 +22,7 @@ Step 4: Calculation of the RMSD of the HADDOCK actACP onto the M14 actACP
 
 1. Download the Python script and the Jupyter Notebook file (for reference) in this repository. Download the 'Sample Data' directory in this repository which contains all the .pdb files. Put these downloaded items into a single directory. 
 
-2. Ensure the PyMOL python package is installed on yur computer. This can be done in the Anaconda prompt by typing: ```conda install -c schrodinger pymol``` 
+2. Ensure the PyMOL python package is installed on your computer. This can be done in the Anaconda prompt by typing: ```conda install -c schrodinger pymol``` 
 
 3. You might need to edit the .py file (and .ipynb file if using) to specify the 'target' enzyme complex to which you want to compare the HADDOCK structures to. In this case it is M14, but other model complexes from previous work include M17 and M10. If different to M14 (the default written into the code), ensure you edit the script to specify the 'target' in the align_all_to_targetactKR() function and the calculate_rmsd() function. 
 
