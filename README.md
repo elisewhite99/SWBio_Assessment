@@ -1,5 +1,5 @@
 # SWBio Data Science and Machine Learning Assessment
-## Using PyMOL for the alignment and RMSD calculation of protein-complex structures from docking experiments
+## Using PyMOL for the alignment and RMSD calculation of enzyme-complex structures from docking experiments
 
 ### Description
 This code has been written in Python, utilising features from the python-based protein visualisation programe PyMOL, to process and compare hundreds of enzyme-complex model structures obtained from different protein docking experiments. 
@@ -24,7 +24,7 @@ Step 4: Calculation of the RMSD of the HADDOCK actACP onto the M14 actACP
 
 2. Ensure the PyMOL python package is installed on your computer. This can be done in the Anaconda prompt by typing: ```conda install -c schrodinger pymol``` 
 
-3. You might need to edit the .py file (and .ipynb file if using) to specify the 'target' enzyme complex to which you want to compare the HADDOCK structures to. In this case it is M14, but other model complexes from previous work include M17 and M10. If different to M14 (the default written into the code), ensure you edit the script to specify the 'target' in the align_all_to_targetactKR() function and the calculate_rmsd() function. 
+3. You might need to edit the .py file (and .ipynb file if using) to specify the 'target' enzyme complex which you want to compare the HADDOCK structures to. In this case it is M14, but other model complexes from previous work include M17 and M10. If different to M14 (the default written into the code), ensure you edit the script to specify the 'target' in the align_all_to_targetactKR() function and the calculate_rmsd() function. 
 
 4. Run the .py script (I typed ```python pymol_align_rmsd_script.py``` into the JupyterLab terminal) or alternatively run each step of the code individually in the Jupyter Notebook file. When prompted add the absolute (NOT relative!) file path which leads to the directory in which the .pdb files are saved to - if you downloaded the entire 'Sample data' directory from this repository it should finish with: ```/Sample Data/```
 
@@ -64,5 +64,5 @@ Note:
 - The line ```(alignment to M14 actKR complete)``` occurs once all HADDOCK structure actKRs have been aligned to the M14 actKR.
 
 
-The analysis is completed once a list of RMSD values corresponding to each HADDOCK structure has been produced and the terminal prints out the message: ```Analysis complete```
+The analysis is complete once a list of RMSD values corresponding to each HADDOCK structure has been produced and the terminal prints out the message: ```Analysis complete```
 The resulting ordered list of HADDOCK protein structures and their corresponding RMSD values allows for the rapid identification of favourable structures to take forward for further MD simulations and hence comparable analyses between different methods of favourable conformation identification. Already, the first, second, and third highest ranked HADDOCK protein structures based on these RMSD values have been used in MD simulations.
